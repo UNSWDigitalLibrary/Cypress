@@ -1,6 +1,6 @@
 describe('Anchors - Checking the href without clicking it', function() {
 	beforeEach(function(){
-	cy.visit('https://primoauat.library.unsw.edu.au/primo-explore/search?vid=UNSWS')
+	cy.visit('website')
 	
 	})
 	context('Test  the Library website bento box (Library Search)', function () {
