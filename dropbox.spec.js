@@ -1,7 +1,7 @@
-describe('TEST063', function() {
+describe('Dropbox', function() {
 	
 	beforeEach(function(){
-	cy.visit('https://primoauat.library.unsw.edu.au/primo-explore/search?vid=UNSWS')
+	cy.visit('website')
 	
 	})
 	context('Verify available options in Advanced Search', function () {
