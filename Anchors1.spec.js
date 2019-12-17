@@ -1,4 +1,4 @@
-describe('TEST065', function() {
+describe('Anchors - Checking the href without clicking it', function() {
 	beforeEach(function(){
 	cy.visit('https://primoauat.library.unsw.edu.au/primo-explore/search?vid=UNSWS')
 	
@@ -18,14 +18,14 @@ describe('TEST065', function() {
 			cy.get('prm-brief-result-container')
 			  .get('div[id="SEARCH_RESULT_RECORDID_UNSW_ALMA21229856000001731"]')
 			  .click({ multiple: true ,force: true })
-			cy.location('href').should('eq', 'https://primoauat.library.unsw.edu.au/primo-explore/fulldisplay?docid=UNSW_ALMA21229856000001731&context=L&vid=UNSWS&lang=en_US&search_scope=SearchFirst&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,morees%20anzacs&offset=0')
+			cy.location('href').should('eq', 'website')
 			})
 		it('To test FRBRised PCI  resources - checking the results page )', function () {
 			cy.get('#searchBar').type('Climate change resilience of a globally important sea turtle nesting population{enter}')
 			cy.get('prm-brief-result-container')
 			  .get('div[id="SEARCH_RESULT_RECORDID_TN_medline30567014"]')
 			  .click({ multiple: true ,force: true })
-			cy.location('href').should('eq', 'https://primoauat.library.unsw.edu.au/primo-explore/fulldisplay?docid=TN_medline30567014&context=PC&vid=UNSWS&lang=en_US&search_scope=SearchFirst&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,Climate%20change%20resilience%20of%20a%20globally%20important%20sea%20turtle%20nesting%20population&offset=0')
+			cy.location('href').should('eq', 'website')
 			})
 		it('To test FRBRised PCI  resources - checking all the versions)', function () {
 			cy.get('#searchBar').type('Climate change resilience of a globally important sea turtle nesting population{enter}')
@@ -44,7 +44,7 @@ describe('TEST065', function() {
 			cy.get('prm-brief-result-container')
 			  .get('div[id="SEARCH_RESULT_RECORDID_TN_informit_tvnewsTEV20111804171"]')
 			  .click({ multiple: true ,force: true })
-			cy.location('href').should('eq', 'https://primoauat.library.unsw.edu.au/primo-explore/fulldisplay?docid=TN_informit_tvnewsTEV20111804171&context=PC&vid=UNSWS&lang=en_US&search_scope=SearchFirst&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,Elton%20John%20confirm%20tour%20down%20under:%20Elton%20John%20will%20return%20to%20Australia%20at%20the%20end%20of%20the%20year%20for%20another%20tour&offset=0')
+			cy.location('href').should('eq', 'website')
 			})
 	})
 })
