@@ -1,4 +1,4 @@
-describe('TEST010', function() {
+describe('Radio button - checking for anchors by visit the website', function() {
 	
 	beforeEach(function(){
 	cy.visit('website')
@@ -78,7 +78,7 @@ describe('TEST010', function() {
 			cy.get('prm-logo-after')
 			  .get('div[class="unsw-breadcrumb"]')
 			  .find('a[class="md-primoExplore-theme"]')
-			  .should('have.attr', 'href' , '/primo-explore/search?vid=UNSWS')
+			  .should('have.attr', 'href' , '/website')
 			cy.request(hrefs).as('resp')
 
 		})
